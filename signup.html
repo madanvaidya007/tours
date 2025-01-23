@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelKaro - Create Account</title>
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --secondary-color: #df3908;
+            --text-dark: #333;
+            --text-light: #6c757d;
+            --bg-light: #f8f9fa;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(135deg, var(--bg-light) 0%, #e9ecef 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .signup-wrapper {
+            display: flex;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            max-width: 1000px;
+            width: 100%;
+            background-color: white;
+        }
+
+        .signup-image {
+            flex: 0 0 50%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 810" preserveAspectRatio="xMinYMin slice"><path fill="%23df3908" d="M0 0h1440v810H0z"/><path d="M0 220c240 88.5 480-44.5 720 44.5s480 177 720 88.5V0H0z" fill="%23007bff" opacity="0.5"/></svg>') no-repeat center/cover;
+            position: relative;
+        }
+
+        .signup-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(223,57,8,0.7);
+        }
+
+        .signup-content {
+            flex: 0 0 50%;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .signup-form {
+            width: 100%;
+        }
+
+        .signup-form h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .signup-form input {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .signup-form input:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 2px rgba(223,57,8,0.25);
+        }
+
+        .signup-form button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .signup-form button:hover {
+            background-color: #ff5722;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .social-signup {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-signup a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #f1f3f5;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+
+        .social-signup a:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="signup-wrapper">
+            <div class="signup-image"></div>
+            <div class="signup-content">
+                <form class="signup-form" action="process-signup.php" method="post">
+                    <h2>Create Account</h2>
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    
+                    <button type="submit">Sign Up</button>
+                    
+                    <div class="social-signup">
+                        <a href="#" title="Sign up with Google">G</a>
+                        <a href="#" title="Sign up with Facebook">F</a>
+                        <a href="#" title="Sign up with Apple">A</a>
+                    </div>
+                    
+                    <div class="login-link">
+                        Already have an account? <a href="login.html" style="color: var(--primary-color);">Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

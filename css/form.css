@@ -1,0 +1,23 @@
+/* .i-btn i{
+    color: red;
+    display: inline;
+    margin-top: 30px;
+}  */
+ #Enquire{
+    display: inline;
+    padding: 10px;
+    color: red;
+    font-weight: bolder;
+    
+}
+span{
+    color: red;
+    font-weight: bolder;
+}
+hr{
+    color: red;
+    height: 99px;
+    box-shadow: 2px 5px 5px red;
+    
+    
+}
